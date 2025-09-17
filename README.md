@@ -7,6 +7,7 @@ grep "cake" cake_rhymes.txt > with_cake.txt
 
 
 bash << 'END'
+
 for i in {1..150}; do
     od -An -N2 -i /dev/random | awk '{print $1 % 1000}'
 done > numbers.txt
