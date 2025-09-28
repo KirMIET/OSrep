@@ -1,0 +1,3 @@
+
+void RevertString(char *str);
+
