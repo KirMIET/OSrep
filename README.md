@@ -38,3 +38,8 @@ gcc /workspaces/OSrep/lab2/task2/main.c -I:/workspaces/OSrep/lab2/task2 -L. -l:d
 export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
 
 ./program_dynamic "Hello World"
+
+wget https://raw.githubusercontent.com/KirMIET/OSlab_2025/master/lab3/text/lab3.md
+
+./parallel_min_max --seed 42 --array_size 1000000 --pnum 4
+./parallel_min_max --seed 123 --array_size 500000 --pnum 8 --by_files
