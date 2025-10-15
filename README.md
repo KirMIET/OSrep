@@ -43,3 +43,6 @@ wget https://raw.githubusercontent.com/KirMIET/OSlab_2025/master/lab3/text/lab3.
 
 ./parallel_min_max --seed 42 --array_size 1000000 --pnum 4
 ./parallel_min_max --seed 123 --array_size 500000 --pnum 8 --by_files
+./parallel_min_max --seed 42 --array_size 100000000000 --pnum 2 --timeout 1
+ps -eo pid,state,time,command | grep Z
+./parallel_sum --threads_num 4 --seed 42 --array_size 100000
