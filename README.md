@@ -47,4 +47,22 @@ wget https://raw.githubusercontent.com/KirMIET/OSlab_2025/master/lab3/text/lab3.
 ps -eo pid,state,time,command | grep Z
 ./parallel_sum --threads_num 4 --seed 42 --array_size 100000
 
+lab5
 ./factorial -k 10 --pnum=4 --mod=1000000
+
+lab6
+gcc -pthread -o server server.c
+gcc -o client client.c
+
+./server --port 20001 --tnum 4
+
+127.0.0.1:20001
+
+./client --k 20 --mod 97 --servers servers.txt
+
+lab7
+./tcpserver 8080 100
+./tcpclient 127.0.0.1 8080 100
+
+./udpserver 20001 1024
+./udpclient 127.0.0.1 20001 1024
